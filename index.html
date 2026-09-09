@@ -29,8 +29,10 @@
 
                 <div class="panel">
                     <h2>Team Setup</h2>
-                    <label>Team Name: <input type="text" id="teamName" placeholder="Team A"></label>
-                    <label>Coach: <input type="text" id="coachName" placeholder="Coach Name"></label>
+                    <label>Team Name:</label>
+                    <input type="text" id="teamName" placeholder="Team A">
+                    <label>Coach:</label>
+                    <input type="text" id="coachName" placeholder="Coach Name">
                 </div>
 
                 <div class="panel">
@@ -39,17 +41,22 @@
                 </div>
 
                 <div class="panel">
-                    <h2>Analysis</h2>
-                    <button onclick="analyzeFormation()">Analyze Formation</button>
-                    <button onclick="exportTactics()">Export Tactics</button>
+                    <h2>Actions</h2>
+                    <button onclick="exportTactics()">📥 Export Tactics</button>
+                    <button onclick="resetPositions()" style="margin-top: 10px;">🔄 Reset Positions</button>
                 </div>
             </aside>
 
             <main class="pitch-container">
                 <div class="pitch">
+                    <p style="color: white; font-size: 0.9rem; margin-bottom: 10px; text-align: center;">
+                        💡 Tip: Click and drag players to adjust their positions
+                    </p>
                     <svg id="field" width="600" height="800"></svg>
                 </div>
-                <div id="analysisResults" class="analysis-panel"></div>
+                <div id="analysisResults" class="analysis-panel">
+                    <p style="color: #999;">Select a formation to see tactical analysis</p>
+                </div>
             </main>
         </div>
     </div>
