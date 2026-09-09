@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Tactics Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚽ Soccer Tactics Analysis</h1>
+            <p>Analyze team formations and player positioning</p>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="panel">
+                    <h2>Formation</h2>
+                    <select id="formation" onchange="loadFormation()">
+                        <option value="">Select Formation</option>
+                        <option value="433">4-3-3</option>
+                        <option value="442">4-4-2</option>
+                        <option value="352">3-5-2</option>
+                        <option value="541">5-4-1</option>
+                        <option value="523">5-2-3</option>
+                    </select>
+                </div>
+
+                <div class="panel">
+                    <h2>Team Setup</h2>
+                    <label>Team Name: <input type="text" id="teamName" placeholder="Team A"></label>
+                    <label>Coach: <input type="text" id="coachName" placeholder="Coach Name"></label>
+                </div>
+
+                <div class="panel">
+                    <h2>Players</h2>
+                    <div id="playersList"></div>
+                </div>
+
+                <div class="panel">
+                    <h2>Analysis</h2>
+                    <button onclick="analyzeFormation()">Analyze Formation</button>
+                    <button onclick="exportTactics()">Export Tactics</button>
+                </div>
+            </aside>
+
+            <main class="pitch-container">
+                <div class="pitch">
+                    <svg id="field" width="600" height="800"></svg>
+                </div>
+                <div id="analysisResults" class="analysis-panel"></div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
